@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView anweisung;
     private EditText matrNumber;
     private TextView rueckgabe;
+    private  TextView ergebnis;
 
 
     String matrikelnummer;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         matrNumber = findViewById(R.id.matrNumber);
         rueckgabe = findViewById(R.id.rueckgabe);
         btnBer = findViewById(R.id.berechnen);
+        ergebnis = findViewById(R.id.ergebnis);
 
         btnAbs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!matrikelnummer.equals("")) {
                     if (matrikelnummer.length() < 7 || matrikelnummer.length() > 9) {
-                        rueckgabe.setText("Das ist keine gültige Matrikelnummer");
+                        ergebnis.setText("Das ist keine gültige Matrikelnummer");
                     } else {
 
                         int[] matNrInt = new int[matrikelnummer.length()];
@@ -82,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
                                 result += num;
                             }
                         }
-                        rueckgabe.setText(result);
+                        ergebnis.setText(result);
                     }
                 } else {
-                    rueckgabe.setText("Gib erst eine Matrikelnummer ein");
+                    ergebnis.setText("Gib erst eine Matrikelnummer ein");
                 }
 
 
