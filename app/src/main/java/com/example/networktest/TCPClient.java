@@ -1,7 +1,5 @@
 package com.example.networktest;
 
-import android.os.AsyncTask;
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -20,7 +18,7 @@ public class TCPClient extends Thread {
     @Override
         public void run() {
 
-            String domain = "se2-isys.aau.at";
+            String domain = "143.205.174.165";
             int port = 53212;
             BufferedReader bfr;
             DataOutputStream out;
@@ -30,7 +28,8 @@ public class TCPClient extends Thread {
                 sock = new Socket(domain, port);
                 bfr = new BufferedReader(new InputStreamReader(sock.getInputStream()));
                 out = new DataOutputStream(sock.getOutputStream());
-                out.writeBytes(matrNumber);
+                out.writeBytes(matrNumber +'\n');
+                out.flush();
                 serverMassage = bfr.readLine();
                 sock.close();
             } catch (IOException e) {
@@ -40,6 +39,10 @@ public class TCPClient extends Thread {
 
     public String getOutput(){
         return serverMassage;
+    }
+
+    public void setMatrNumber(String matrNumber){
+        this.matrNumber = matrNumber;
     }
 
 }
