@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView anweisung;
     private EditText matrNumber;
     private TextView rueckgabe;
-    private  TextView ergebnis;
+    private TextView ergebnis;
 
 
     String matrikelnummer;
@@ -78,22 +78,35 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         String result = "";
+                        boolean isPrime;
+                        int num = 0;
+
                         for (int m = 0; m < matNrInt.length; m++) {
-                            int num = matNrInt[m];
-                            if (num < 2 || num % 2 == 0 || num % 3 == 0) {
+                            num = matNrInt[m];
+                            if (!isPrime(num)) {
                                 result += num;
                             }
+                            ergebnis.setText(result);
+
                         }
-                        ergebnis.setText(result);
                     }
-                } else {
-                    ergebnis.setText("Gib erst eine Matrikelnummer ein");
                 }
-
-
-            }
-        });
-
+                    else{
+                        ergebnis.setText("Gib erst eine Matrikelnummer ein");
+                    }
+                }
+                public boolean isPrime(int num){
+                    if (num <= 1) {
+                        return false;
+                    }
+                    for (int i = 2; i <= Math.sqrt(num); i++) {
+                        if (num % i == 0) {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            });
+        }
 
     }
-}
