@@ -5,4 +5,9 @@
     <string name="gib_deine_matrikelnummer_ein">Gib deine Matrikelnummer ein:</string>
     <string name="berechnen">Berechnen</string>
     <string name="ergebnis_berechnung">Ergebnis Berechnung</string>
+    <string name="welche_aufgabe_soll_berechnet_werden">Welche Aufgabe soll berechnet werden?</string>
+    <string name="w_hle_eine_aufgabe_aus">Wähle eine Aufgabe aus:</string>
+    <string name="gib_ein_welche_aufgabe_du_berechnen_willst_0_6">Gib ein welche Aufgabe du berechnen willst (0-6):</string>
+    <string name="Beschreibung">\@string/beschreibung</string>
+    <string name="kurzbeschreibung_aufgaben">Kurzbeschreibung Aufgaben</string>
 </resources>

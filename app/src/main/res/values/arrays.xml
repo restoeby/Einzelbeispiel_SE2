@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aufgaben">
+        <item>Aufgabe 0 - Alternierende Quersumme /Augabe gerade od. ungerade</item>
+        <item>Aufgabe 1 - Matrikelnummer sortieren / gerade und ungerade aufsteigend</item>
+        <item>Aufgabe 2 - Gemeinsamen Teiler finden / Index ausgeben</item>
+        <item>Aufgabe 3 - zweite Ziffer durch ASCII Characters ersetzen</item>
+        <item>Aufgabe 4 - Quersumme bilden / Binärzahl ausgeben</item>
+        <item>Aufgabe 5 - Ziffern sortieren / Primzahlen streichen</item>
+        <item>Aufgabe 6 - Primzahlen ausgeben </item>
+    </string-array>
+</resources>

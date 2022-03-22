@@ -6,58 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/ergebnis"
-        android:layout_width="363dp"
-        android:layout_height="21dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/ergebnis_berechnung"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/berechnen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="364dp"
+        android:text="@string/berechnen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
-
-    <TextView
-        android:id="@+id/rueckgabe"
-        android:layout_width="251dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/antwort_vom_server"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="180dp"
         android:layout_marginEnd="130dp"
         android:layout_marginBottom="180dp"
         android:text="@string/abschicken"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/anweisung"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/ergebnis"
+        android:layout_width="372dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/ergebnis_berechnung"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/rueckgabe"
+        android:layout_width="251dp"
+        android:layout_height="51dp"
+        android:text="@string/antwort_vom_server"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
 
     <EditText
         android:id="@+id/matrNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:importantForAutofill="no"
@@ -65,40 +76,95 @@
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/aufgabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="524dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/anweisung"
-        android:layout_width="258dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="107dp"
+        android:layout_width="319dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/gib_deine_matrikelnummer_ein"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/matrNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/berechnen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="167dp"
-        android:text="@string/berechnen"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/welcheaufgabe"
+        android:layout_width="259dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/gib_ein_welche_aufgabe_du_berechnen_willst_0_6"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/rueckgabe" />
+
+    <TextView
+        android:id="@+id/kurzText"
+        android:layout_width="254dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/kurzbeschreibung_aufgaben"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/beschreibung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rueckgabe" />
+
+    <Spinner
+        android:id="@+id/beschreibung"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="23dp"
+        android:contentDescription="@string/Beschreibung"
+        app:layout_constraintBottom_toTopOf="@+id/aufgabe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcheaufgabe"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

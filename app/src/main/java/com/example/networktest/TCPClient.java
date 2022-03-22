@@ -41,8 +41,4 @@ public class TCPClient extends Thread {
         return serverMassage;
     }
 
-    public void setMatrNumber(String matrNumber){
-        this.matrNumber = matrNumber;
-    }
-
 }
